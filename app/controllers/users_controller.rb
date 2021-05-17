@@ -2,11 +2,11 @@ class UsersController < ApplicationController
 
 	def show
 		@user = User.find(params[:id])
-		@articles = @user.articles
+		@pagy, @articles = pagy(@user.articles.all, items: 4)
 	end
 
 	def index
-		@users = User.all
+		@pagy, @users = pagy(User.all, items: 4)
 	end
 
 	def new
