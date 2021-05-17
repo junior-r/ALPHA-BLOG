@@ -39,6 +39,17 @@ body {
   height: 100%;
 }
 
+body::-webkit-scrollbar{
+  width: 7px;
+  background-color: #fff;
+  border-radius: 30px;
+}
+
+body::-webkit-scrollbar-thumb{
+  background: #ffa500;
+  border-radius: 30px;
+}
+
 #page-content {
   flex: 1 0 auto;
   background: lightgray;
